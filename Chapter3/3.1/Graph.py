@@ -18,7 +18,7 @@ with tf.Session(graph = g1) as sess:
 	with tf.variable_scope("",reuse=True):
 		print(sess.run(tf.get_variable("v")))
 		
-#read the value of 'v' in graph g1
+#read the value of 'v' in graph g2
 with tf.Session(graph = g2) as sess:
 	tf.initialize_all_variables().run()
 	with tf.variable_scope("",reuse=True):
